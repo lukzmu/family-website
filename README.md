@@ -13,6 +13,7 @@ The deployment is done through Github Actions and posted on GitHub Pages.
 - Python 3.11
 - Docker
 - Docker Compose
+- Make
 
 ## Environment Variables
 
@@ -24,8 +25,9 @@ The deployment is done through Github Actions and posted on GitHub Pages.
 
 | **Action** | **Command** |
 | :--- | :--- |
-| Build the project | `docker compose build` |
-| Run the project | `docker compose up` |
-| Format project | `docker compose run web fmt` |
-| Lint project | `docker compose run web lint` |
-| Test project | `docker compose run web test` |
+| Build the project | `make build` |
+| Run the project | `make run` |
+| Format project | `make fmt` |
+| Lint project | `make lint` |
+| Test project | `make test` |
+| Clean docker project files | `make clean` |

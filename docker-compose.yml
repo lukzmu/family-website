@@ -5,6 +5,8 @@ x-base: &base
   env_file: .env
   volumes:
     - .:/app
+  labels:
+    me.zmudzinski: family-website
 
 services:
   web:
