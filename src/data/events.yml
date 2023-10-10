@@ -1,81 +1,118 @@
 items:
-  - title: 🇮🇹 Trip to Italy
-    date: August 2023
-  - title: 💼 Łukasz starts job at Infermedica
-    date: August 2023
-  - title: 🎓 Anna receives a PhD in Animal Sciences
-    date: March 2023
-  - title: 🏡 Land acquired in Kikity, Poland
-    date: February 2023
-  - title: 🐱 Geralt is adopted
-    date: January 2022
-  - title: 🇨🇦 Trip to Canada
-    date: December 2021
-  - title: 🐴 Vader is adopted
-    date: November 2021
-  - title: 🚗 Family car "Lambert" is bought
-    date: July 2021
-  - title: 🐴 Baine is adopted
-    date: May 2021
-  - title: 👰🏻‍♀️ Anna and Łukasz get married
-    date: May 2021
+  - title: Trip to Italy
+    icon: 🇮🇹
+    date: 2023.08.12
+  - title: Łukasz starts job at Infermedica
+    icon: 💼
+    date: 2023.08.01
+  - title: Anna receives a PhD in Animal Sciences
+    icon: 🎓
+    date: 2023.03.30
+  - title: Land acquired in Kikity, Poland
+    icon: 🏡
+    date: 2023.02.03
+  - title: Geralt is adopted
+    icon: 🐱
+    date: 2022.01.15
+  - title: Trip to Canada
+    icon: 🇨🇦
+    date: 2021.12.19
+  - title: Vader is adopted
+    icon: 🐴
+    date: 2021.11.21
+  - title: Family car "Lambert" is bought
+    icon: 🚗
+    date: 2021.08.03
+  - title: Baine is adopted
+    icon: 🐴
+    date: 2021.05.09
+  - title: Anna and Łukasz get married
+    icon: 👰🏻‍♀️
+    date: 2021.05.04
     important: true
-  - title: 🕹️ Anna and Łukasz join Barbarzyńcy
-    date: April 2021
-  - title: 🐹 Simba is adopted
-    date: March 2021
-  - title: 💼 Łukasz starts job at Merixstudio
-    date: September 2020
-  - title: 💼 Łukasz starts job at Butter
-    date: July 2018
-  - title: 🎓 Anna receives a MSc in Biotechnology
-    date: July 2018
-  - title: 💍 Anna and Łukasz get engaged
-    date: September 2017
+  - title: Anna and Łukasz join Barbarzyńcy
+    icon: 🕹️
+    date: 2021.04.12
+  - title: Simba is adopted
+    icon: 🐹
+    date: 2021.03.21
+  - title: Łukasz starts job at Merixstudio
+    icon: 💼
+    date: 2020.09.01
+  - title: Łukasz starts job at Butter
+    icon: 💼
+    date: 2018.07.01
+  - title: Anna receives a MSc in Biotechnology
+    icon: 🎓
+    date: 2018.07.09
+  - title: Anna and Łukasz get engaged
+    icon: 💍
+    date: 2017.09.15
     important: true
-  - title: 🇦🇪 Trip to UAE
-    date: September 2017
-  - title: 🐹 Rey and Asajj are adopted
-    date: April 2017
-  - title: 🎓 Anna receives a BSc in Biotechnology
-    date: February 2017
-  - title: 🇨🇿 Trip to Czech Republic
-    date: December 2016
-  - title: 🥰 Anna and Łukasz get together
-    date: November 2016
+  - title: Trip to UAE
+    icon: 🇦🇪
+    date: 2017.09.13
+  - title: Rey and Asajj are adopted
+    icon: 🐹
+    date: 2017.04.15
+  - title: Anna receives a BSc in Biotechnology
+    icon: 🎓
+    date: 2017.02.14
+  - title: Trip to Czech Republic
+    icon: 🇨🇿
+    date: 2016.12.29
+  - title: Anna and Łukasz get together
+    icon: 🥰
+    date: 2016.11.12
     important: true
-  - title: 💼 Łukasz starts job at UWM
-    date: October 2016
-  - title: 🐱 Kotek is adopted
-    date: September 2016
-  - title: 🎓 Łukasz receives a MSc in Information Technology
-    date: July 2016
-  - title: 🐺 Wifi is adopted
-    date: October 2015
-  - title: 💼 Łukasz starts job at Treesat
-    date: October 2015
-  - title: 🎓 Łukasz receives a BSc in Information Technology
-    date: May 2014
-  - title: 🐹 Fifi and Stefa Jr. are adopted
-    date: April 2014
-  - title: 🐱 Garfield is adopted
-    date: July 2013
-  - title: 🎓 Anna goes to University
-    date: October 2012
-  - title: 😮 Anna and Łukasz meet for the first time
-    date: September 2012
+  - title: Łukasz starts job at UWM
+    icon: 💼
+    date: 2016.10.01
+  - title: Kotek is adopted
+    icon: 🐱
+    date: 2016.09.17
+  - title: Łukasz receives a MSc in Information Technology
+    icon: 🎓
+    date: 2016.07.01
+  - title: Wifi is adopted
+    icon: 🐺
+    date: 2015.10.25
+  - title: Łukasz starts job at Treesat
+    icon: 💼
+    date: 2015.10.01
+  - title: Łukasz receives a BSc in Information Technology
+    icon: 🎓
+    date: 2014.06.12
+  - title: Fifi and Stefa Jr. are adopted
+    icon: 🐹
+    date: 2014.04.21
+  - title: Garfield is adopted
+    icon: 🐱
+    date: 2013.07.08
+  - title: Anna goes to University
+    icon: 🎓
+    date: 2012.10.01
+  - title: Anna and Łukasz meet for the first time
+    icon: 😮
+    date: 2012.09.29
     important: true
-  - title: 🐹 Luna and Stefa are adopted
-    date: February 2011
-  - title: 💼 Łukasz starts job at ITM Software House
-    date: September 2010
-  - title: 🎓 Łukasz goes to University
-    date: October 2009
-  - title: 🐶 Bingo is adopted
-    date: November 1998
-  - title: 🍼 Anna is born
-    date: April 1993
+  - title: Luna and Stefa are adopted
+    icon: 🐹
+    date: 2011.02.14
+  - title: Łukasz starts job at ITM Software House
+    icon: 💼
+    date: 2010.09.01
+  - title: Łukasz goes to University
+    icon: 🎓
+    date: 2009.10.01
+  - title: Bingo is adopted
+    icon: 🐶
+    date: 1998.11.28
+  - title: Anna is born
+    icon: 🍼
+    date: 1993.04.02
     important: true
-  - title: 🍼 Łukasz is born
-    date: May 1989
+  - title: Łukasz is born
+    icon: 🍼
+    date: 1989.05.02
     important: true

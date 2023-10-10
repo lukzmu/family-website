@@ -17,3 +17,4 @@ class TestEventRepository:
         result = event_repository().get_event_list()
 
         assert len(result) == 2
+        assert result[0].title == "Anna and Łukasz get married"

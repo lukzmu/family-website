@@ -19,12 +19,16 @@
         </div>
 
         {% if event.important %}
-        <p class="flex-auto font-medium py-0.5 text-xs leading-5 text-gray-600 dark:text-neutral-300">{{ event.title }}</p>
+        <p class="flex-auto font-medium py-0.5 text-xs leading-5 text-gray-600 dark:text-neutral-300">
+          <span class="mr-4">{{ event.icon }}</span>{{ event.title }}
+        </p>
         {% else %}
-        <p class="flex-auto py-0.5 text-xs leading-5 text-gray-600 dark:text-neutral-500">{{ event.title }}</p>
+        <p class="flex-auto py-0.5 text-xs leading-5 text-gray-600 dark:text-neutral-500">
+          <span class="mr-4">{{ event.icon }}</span>{{ event.title }}
+        </p>
         {% endif %}
 
-        <time class="flex-none py-0.5 text-xs leading-5 text-gray-600 dark:text-neutral-500">{{ event.date }}</time>
+        <time class="flex-none py-0.5 text-xs leading-5 text-gray-600 dark:text-neutral-500">{{ event.date.strftime("%B %Y") }}</time>
       </li>
       {% endfor %}
     </ul>
