@@ -24,7 +24,7 @@ def person_data():
                         "icon": "github",
                         "url": "https://github.com/divinebanana",
                     }
-                ]
+                ],
             },
             {
                 "name": "Anna",

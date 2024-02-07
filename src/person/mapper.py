@@ -17,5 +17,5 @@ class PersonMapper:
                     url=social_media["url"],
                 )
                 for social_media in person.get("social_media", [])
-            ]
+            ],
         )
