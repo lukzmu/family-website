@@ -2,9 +2,23 @@ items:
   - name: Łukasz
     avatar: lukasz.png
     title: Python Engineer
+    social_media:
+      - name: GitHub
+        icon: github
+        url: https://github.com/divinebanana
+      - name: LinkedIn
+        icon: linkedin
+        url: https://www.linkedin.com/in/divinebanana/
+      - name: World of Warcraft
+        icon: wow
+        url: https://worldofwarcraft.blizzard.com/en-gb/character/eu/burning-legion/divinebanana
   - name: Anna
     avatar: ania.png
     title: Animal Sciences PhD
+    social_media:
+      - name: World of Warcraft
+        icon: wow
+        url: https://worldofwarcraft.blizzard.com/en-gb/character/eu/burning-legion/have
   - name: Alicja
     avatar: alicja.png
     title: Future Rocket Scientist

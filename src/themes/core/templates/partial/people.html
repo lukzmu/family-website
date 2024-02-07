@@ -1,15 +1,33 @@
 <ul role="list" class="grid 2xl:grid-cols-[repeat(auto-fit,_25%)] m-auto mt-20 justify-center gap-6">
   {% for person in SITE_DATA.people %}
   <li
-    class="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white dark:bg-neutral-900 text-center shadow dark:hover:bg-neutral-800 hover:bg-neutral-100 transition ease-in-out duration-300">
+    class="col-span-1 flex flex-col divide-y divide-neutral-200 rounded-lg bg-white dark:bg-neutral-900 text-center shadow dark:hover:bg-neutral-800 hover:bg-neutral-100 transition ease-in-out duration-300">
     <div class="flex flex-1 flex-col p-8">
       <img class="mx-auto h-32 w-32 flex-shrink-0"
         src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/people/{{ person.avatar }}" alt="">
-      <h3 class="mt-6 text-lg font-medium text-gray-900 dark:text-neutral-100">{{ person.name }}</h3>
+      <h3 class="mt-6 text-lg font-medium text-neutral-900 dark:text-neutral-100">{{ person.name }}</h3>
       <dl class="mt-1 flex flex-grow flex-col justify-between">
         <dt class="sr-only">Title</dt>
-        <dd class="text-sm text-gray-600 dark:text-neutral-500">{{ person.title }}</dd>
+        <dd class="text-sm text-neutral-600 dark:text-neutral-500">{{ person.title }}</dd>
       </dl>
+      <span class="isolate inline-flex rounded-md shadow-sm mt-8 mx-auto">
+      {%  for social_media in person.social_media %}
+        <a href="{{ social_media.url }}" target="_blank">
+        {% if person.social_media | length == 1 %}
+            <button type="button" class="relative inline-flex items-center rounded-md bg-white dark:bg-neutral-900 px-3 py-2 text-sm font-semibold text-neutral-900 dark:text-neutral-100 ring-1 ring-inset ring-neutral-300 dark:ring-neutral-500 hover:bg-neutral-50 dark:hover:bg-neutral-800 focus:z-10">
+        {%  elif loop.first %}
+            <button type="button" class="relative inline-flex items-center rounded-l-md bg-white dark:bg-neutral-900 px-3 py-2 text-sm font-semibold text-neutral-900 dark:text-neutral-100 ring-1 ring-inset ring-neutral-300 dark:ring-neutral-500 hover:bg-neutral-50 dark:hover:bg-neutral-800 focus:z-10">
+        {% elif loop.last %}
+            <button type="button" class="relative -ml-px inline-flex items-center rounded-r-md bg-white dark:bg-neutral-900 px-3 py-2 text-sm font-semibold text-neutral-900 dark:text-neutral-100 ring-1 ring-inset ring-neutral-300 dark:ring-neutral-500 hover:bg-neutral-50 dark:hover:bg-neutral-800 focus:z-10">
+        {% else %}
+            <button type="button" class="relative -ml-px inline-flex items-center bg-white dark:bg-neutral-900 px-3 py-2 text-sm font-semibold text-neutral-900 dark:text-neutral-100 ring-1 ring-inset ring-neutral-300 dark:ring-neutral-500 hover:bg-neutral-50 dark:hover:bg-neutral-800 focus:z-10">
+        {%  endif %}
+        <svg class="w-4 h-4 fill-neutral-900 dark:fill-neutral-100">
+            <use xlink:href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/icons/{{ social_media.icon }}.svg#{{ social_media.icon }}"></use>
+        </svg>
+        </button></a>
+      {%  endfor %}
+      </span>
     </div>
   </li>
   {% endfor %}
