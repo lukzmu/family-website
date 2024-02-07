@@ -18,6 +18,13 @@ def person_data():
                 "name": "Łukasz",
                 "avatar": "lukasz.png",
                 "title": "Python Engineer",
+                "social_media": [
+                    {
+                        "name": "GitHub",
+                        "icon": "github",
+                        "url": "https://github.com/divinebanana",
+                    }
+                ]
             },
             {
                 "name": "Anna",
