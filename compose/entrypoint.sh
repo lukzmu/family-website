@@ -8,16 +8,16 @@ if [ "$1" = 'runserver' ]; then
 elif [ "$1" = 'lint' ]; then
     shift
     OPTS=${@:-'.'}
-    echo "-- black --" && black --check --diff $OPTS || EXIT=$?
-    echo "-- ruff --" && ruff $OPTS || EXIT=$?
+    echo "-- ruff lint --" && ruff check $OPTS || EXIT=$?
+    echo "-- ruff format --" && ruff format --check $OPTS || EXIT=$?
     MYPY_OPTS=${@:-'src/'}
     echo "-- mypy --" && mypy $MYPY_OPTS || EXIT=$?
     exit ${EXIT:-0}
 elif [ "$1" = 'fmt' ]; then
     shift
     OPTS=${@:-'.'}
-    echo "-- black --" && black $OPTS
-    echo "-- ruff --" && ruff --fix $OPTS
+    echo "-- ruff lint --" && ruff check --fix $OPTS
+    echo "-- ruff format --" && ruff format $OPTS
     exit 0
 elif [ "$1" = 'test' ]; then
     shift
