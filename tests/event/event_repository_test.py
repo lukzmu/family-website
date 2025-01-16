@@ -8,9 +8,7 @@ class TestEventRepository:
 
         assert repository._data_path == data_path
 
-    def test_event_repository_returns_correct_event_count(
-        self, event_repository, event_data, mocker
-    ):
+    def test_event_repository_returns_correct_event_count(self, event_repository, event_data, mocker):
         mocked_data = mocker.mock_open(read_data=json.dumps(event_data))
         mocker.patch("builtins.open", mocked_data)
 

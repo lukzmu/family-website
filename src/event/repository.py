@@ -1,6 +1,7 @@
 from typing import List
 
 import yaml
+
 from event.dto import Event
 from event.mapper import EventMapper
 

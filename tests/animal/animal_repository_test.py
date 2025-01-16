@@ -8,9 +8,7 @@ class TestAnimalRepository:
 
         assert repository._data_path == data_path
 
-    def test_animals_list_returns_correct_animal_count(
-        self, animal_repository, animal_data, mocker
-    ):
+    def test_animals_list_returns_correct_animal_count(self, animal_repository, animal_data, mocker):
         mocked_data = mocker.mock_open(read_data=json.dumps(animal_data))
         mocker.patch("builtins.open", mocked_data)
 
@@ -18,9 +16,7 @@ class TestAnimalRepository:
 
         assert len(result) == 4
 
-    def test_animals_list_returns_sorted_animals_by_name_and_alive(
-        self, animal_repository, animal_data, mocker
-    ):
+    def test_animals_list_returns_sorted_animals_by_name_and_alive(self, animal_repository, animal_data, mocker):
         mocked_data = mocker.mock_open(read_data=json.dumps(animal_data))
         mocker.patch("builtins.open", mocked_data)
 

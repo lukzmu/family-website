@@ -1,4 +1,5 @@
 import pytest
+
 from animal.repository import AnimalRepository
 
 

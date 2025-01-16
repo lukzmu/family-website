@@ -1,4 +1,5 @@
 import pytest
+
 from event.repository import EventRepository
 
 
