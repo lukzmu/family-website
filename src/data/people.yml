@@ -6,6 +6,9 @@ items:
       - name: GitHub
         url: https://github.com/lukzmu
         icon: github
+      - name: LinkedIn
+        url: https://www.linkedin.com/in/lukzmu/
+        icon: linkedin
   - name: Anna
     avatar: anna.png
     title: Animal Sciences PhD
