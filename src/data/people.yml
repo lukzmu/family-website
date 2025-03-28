@@ -9,6 +9,9 @@ items:
       - name: LinkedIn
         url: https://www.linkedin.com/in/lukzmu/
         icon: linkedin
+      - name: Dev
+        url: https://dev.to/lukzmu
+        icon: dev
   - name: Anna
     avatar: anna.png
     title: Animal Sciences PhD
