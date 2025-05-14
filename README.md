@@ -31,4 +31,4 @@ The deployment is done through Github Actions and posted on GitHub Pages.
 | Lint project | `make lint` |
 | Test project | `make test` |
 | Clean docker project files | `make clean` |
-| Update poetry lock | `make update-lock` |
+| Update uv lock | `make update-lock` |

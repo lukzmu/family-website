@@ -12,6 +12,5 @@ runs:
     - name: Install dependencies
       run: |
         echo "PYTHONPATH=$PYTHONPATH:./src" >> $GITHUB_ENV
-        pip install poetry
-        poetry config virtualenvs.in-project true
+        pip install uv
       shell: bash

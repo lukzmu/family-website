@@ -14,11 +14,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Setup Python
-        uses: ./.github/workflows/composite/build_dev
+        uses: ./.github/workflows/composite/setup-env
       - name: Ruff
-        run: |
-          source .venv/bin/activate       
-          ruff check src/
+        run: uv run ruff check src/
 
   mypy:
     runs-on: ubuntu-latest
@@ -26,11 +24,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Setup Python
-        uses: ./.github/workflows/composite/build_dev
+        uses: ./.github/workflows/composite/setup-env
       - name: MyPy
-        run: |
-          source .venv/bin/activate       
-          mypy src/
+        run: uv run mypy src/
   
   pytest:
     runs-on: ubuntu-latest
@@ -41,11 +37,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Setup Python
-        uses: ./.github/workflows/composite/build_dev
+        uses: ./.github/workflows/composite/setup-env
       - name: PyTest
         run: |
-          source .venv/bin/activate
-          pytest --cov=src --cov-report=json
+          uv run pytest --cov=src --cov-report=json
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
         env:
@@ -60,12 +55,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Setup Python
-        uses: ./.github/workflows/composite/build_prod    
+        uses: ./.github/workflows/composite/setup-env    
       - name: Create page content
         run: |
-          source .venv/bin/activate
           cd src
-          pelican content -s core/settings.py -o ~/public
+          uv run pelican content -s core/settings.py -o ~/public
       - name: Deploy to gh-pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
