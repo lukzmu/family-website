@@ -17,4 +17,4 @@ clean:
 	@docker system prune -f --filter "label=me.zmudzinski=family-website"
 
 update-lock:
-	@docker compose run web poetry lock
+	@docker compose run web uv lock
