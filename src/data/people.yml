@@ -9,9 +9,6 @@ items:
       - name: LinkedIn
         url: https://www.linkedin.com/in/lukzmu/
         icon: linkedin
-      - name: BlueSky
-        url: https://bsky.app/profile/zmudzinski.me
-        icon: bluesky
   - name: Anna
     avatar: anna.png
     title: Animal Sciences PhD
