@@ -1,4 +1,8 @@
 items:
+  - title: Zuzanna is born
+    icon: 🍼
+    date: 2025.07.02
+    important: true
   - title: Łukasz finishes post-graduate in Healthcare Management
     icon: 🎓
     date: 2024.09.01
