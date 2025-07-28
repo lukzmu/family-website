@@ -8,11 +8,11 @@
 struct Person: Codable {
     let name: String
     let title: String
-    let image: String
-    
-    init(name: String, title: String, image: String) {
+    let avatar: String
+
+    init(name: String, title: String, avatar: String) {
         self.name = name
         self.title = title
-        self.image = image
+        self.avatar = avatar
     }
 }
