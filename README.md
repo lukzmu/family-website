@@ -1,34 +1,20 @@
 ![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/lukzmu/family-website/pages.yml)
-![Codecov](https://img.shields.io/codecov/c/github/lukzmu/family-website)
 ![GitHub](https://img.shields.io/github/license/lukzmu/family-website)
-
+		
 # Family Website
 
-Żmudziński family website written using Python thanks to the Pelican package. The website shows our family members, animals and history.
+Żmudziński family website is created using Swift and the [Publish](https://github.com/JohnSundell/Publish) package. The website shows our family members, animals and events that were important to us.
 
-The deployment is done through Github Actions and posted on GitHub Pages.
+The deployment is done through GitHub Actions and posted to GitHub Pages.
 
 ## Requirements
 
-- Python 3.11
-- Docker
-- Docker Compose
-- Make
-
-## Environment Variables
-
-| **Variable** | **Description** |
-| :--- | :--- |
-| `SITEURL` | The url of the final website |
+- Swift version 5.4 (or later)
+- macOS Big Sur (11.0) or later
+- Publish installed (eg. `brew install publish`)
 
 ## Useful commands
 
 | **Action** | **Command** |
 | :--- | :--- |
-| Build the project | `make build` |
-| Run the project | `make run` |
-| Format project | `make fmt` |
-| Lint project | `make lint` |
-| Test project | `make test` |
-| Clean docker project files | `make clean` |
-| Update uv lock | `make update-lock` |
+| Run the project locally | `publish run` |
