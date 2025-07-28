@@ -1,4 +1,3 @@
-![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/lukzmu/family-website/pages.yml)
 ![GitHub](https://img.shields.io/github/license/lukzmu/family-website)
 		
 # Family Website
@@ -18,3 +17,4 @@ The deployment is done through GitHub Actions and posted to GitHub Pages.
 | **Action** | **Command** |
 | :--- | :--- |
 | Run the project locally | `publish run` |
+| Deploy the project | `publish deploy` |

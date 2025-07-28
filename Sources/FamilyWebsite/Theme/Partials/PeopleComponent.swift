@@ -32,7 +32,7 @@ struct PeopleComponent: Component {
                                 .class(
                                     "mx-auto h-32 w-32 flex-shrink-0 rounded-lg"
                                 ),
-                                .src("/images/people/\(person.avatar)"),
+                                .src("/Images/People/\(person.avatar)"),
                                 .alt("")
                             ),
                             Node.h3(

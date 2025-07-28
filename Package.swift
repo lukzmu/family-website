@@ -25,7 +25,6 @@ let package = Package(
             dependencies: [
                 "Publish", "Yams",
             ],
-            resources: [.process("Resources")]
         )
     ]
 )
