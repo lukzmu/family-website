@@ -28,12 +28,14 @@ struct FooterComponent: Component {
                     Node.a(
                         .class("underline ml-1"),
                         .href("https://github.com/JohnSundell/Publish"),
+                        .target(.blank),
                         .text("Publish")
                     ),
                     .text(". Source on "),
                     Node.a(
                         .class("underline ml-1"),
                         .href("https://github.com/lukzmu/family-website"),
+                        .target(.blank),
                         .text("GitHub")
                     ),
                     .text(".")
