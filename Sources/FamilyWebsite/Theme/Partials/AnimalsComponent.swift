@@ -77,7 +77,7 @@ struct AnimalsComponent: Component {
                                             "mx-auto h-24 w-24 rounded-full grayscale hover:scale-105 hover:rotate-[10deg] transition"
                                         ),
                                         .src(
-                                            "/images/animals/\(animal.avatar)"
+                                            "/Images/Animals/\(animal.avatar)"
                                         ),
                                         .alt(animal.name)
                                     ),
