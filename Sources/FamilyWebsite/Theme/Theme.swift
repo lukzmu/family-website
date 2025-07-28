@@ -29,6 +29,7 @@ private struct CoreHTMLFactory<Site: Website>: HTMLFactory {
                 .description(context.site.description),
                 .viewport(.accordingToDevice),
                 .twitterCardType(.summaryLargeImage),
+                .meta(.name("og:image"), .content("/Images/twitter_card.png")),
                 .stylesheet("/animations.css"),
                 .script(.src("https://cdn.tailwindcss.com")),
             ),
