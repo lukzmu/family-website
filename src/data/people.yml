@@ -1,6 +1,6 @@
 items:
   - name: Łukasz
-    avatar: lukasz.png
+    avatar: lukasz.jpeg
     title: Python Engineer
     social:
       - name: GitHub
@@ -10,11 +10,11 @@ items:
         url: https://www.linkedin.com/in/lukzmu/
         icon: linkedin
   - name: Anna
-    avatar: anna.png
+    avatar: anna.jpeg
     title: Animal Sciences PhD
   - name: Alicja
-    avatar: alicja.png
+    avatar: alicja.jpeg
     title: Future Rocket Scientist
   - name: Zuzanna
-    avatar: zuzanna.png
+    avatar: zuzanna.jpeg
     title: Future Rock Star
