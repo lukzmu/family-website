@@ -1,14 +1,12 @@
 import pytest
 
+from family_website.animal.mapper import AnimalMapper
 from family_website.animal.repository import AnimalRepository
 
 
 @pytest.fixture
 def animal_repository():
-    def _animal_repository(data_path="dummy_path"):
-        return AnimalRepository(data_path=data_path)
-
-    return _animal_repository
+    return AnimalRepository(mapper=AnimalMapper)
 
 
 @pytest.fixture

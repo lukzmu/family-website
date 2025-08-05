@@ -1,14 +1,12 @@
 import pytest
 
+from family_website.person.mapper import PersonMapper
 from family_website.person.repository import PersonRepository
 
 
 @pytest.fixture
 def person_repository():
-    def _person_repository(data_path="dummy_path"):
-        return PersonRepository(data_path=data_path)
-
-    return _person_repository
+    return PersonRepository(mapper=PersonMapper)
 
 
 @pytest.fixture
