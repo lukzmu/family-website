@@ -2,8 +2,8 @@ from typing import List
 
 import yaml
 
-from event.dto import Event
-from event.mapper import EventMapper
+from family_website.event.dto import Event
+from family_website.event.mapper import EventMapper
 
 
 class EventRepository:
@@ -18,4 +18,4 @@ class EventRepository:
             return events
 
 
-event_repository = EventRepository(data_path="data/events.yml")
+event_repository = EventRepository(data_path="family_website/data/events.yml")

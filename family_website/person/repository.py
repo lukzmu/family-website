@@ -2,8 +2,8 @@ from typing import List
 
 import yaml
 
-from person.dto import Person
-from person.mapper import PersonMapper
+from family_website.person.dto import Person
+from family_website.person.mapper import PersonMapper
 
 
 class PersonRepository:
@@ -16,4 +16,4 @@ class PersonRepository:
             return [PersonMapper.dict_to_dto(person=person) for person in data["items"]]
 
 
-person_repository = PersonRepository(data_path="data/people.yml")
+person_repository = PersonRepository(data_path="family_website/data/people.yml")

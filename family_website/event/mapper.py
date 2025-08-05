@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import Any, Dict
 
-from event.dto import Event
+from family_website.event.dto import Event
 
 
 class EventMapper:
