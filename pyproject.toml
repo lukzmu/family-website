@@ -32,13 +32,22 @@ dev = [
 envfile = ".env"
 
 [tool.poe.tasks.serve]
-cmd = "uv run python -m pelican -lr $CONTENT -s $SETTINGS -o $OUTPUT -b $HOST"
+cmd = "uv run python -m pelican -lr $content -s $settings -o $output -b $host"
 args = [
-    { name = "CONTENT", default = "family_website/content" },
-    { name = "SETTINGS", default = "family_website/core/settings.py" },
-    { name = "OUTPUT", default = "output" },
-    { name = "HOST", default="0.0.0.0" },
+    { name = "content", default = "family_website/content" },
+    { name = "settings", default = "family_website/core/settings.py" },
+    { name = "output", default = "output" },
+    { name = "host", default="0.0.0.0" },
 ]
+
+[tool.poe.tasks.build]
+cmd = "uv run pelican $content -s $settings -o $output"
+args = [
+    { name = "content", default = "family_website/content" },
+    { name = "settings", default = "family_website/core/settings.py" },
+    { name = "output", default = "output" },
+]
+env = { "PYTHONPATH" = "." }
 
 [tool.poe.tasks.test]
 cmd = "uv run pytest --cov=family_website --cov-report=json"
