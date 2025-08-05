@@ -59,7 +59,7 @@ _ruff_format_check = "uv run ruff format --check"
 _mypy_check = "uv run mypy family_website"
 lint = ["_ruff_check", "_ruff_format_check", "_mypy_check"]
 
-_ruff_check_fix = "uv run ruff check --fix"
+_ruff_check_fix = "uv run ruff check family_website --fix"
 _ruff_format_fix = "uv run ruff format"
 lint_fix = ["_ruff_check_fix", "_ruff_format_fix"]
 
