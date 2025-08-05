@@ -94,7 +94,6 @@ ignore_missing_imports = true
 branch = true
 omit = [
     "family_website/core/settings.py",
-    "family_website/tasks.py",
     "*/dto.py",
 ]
 
