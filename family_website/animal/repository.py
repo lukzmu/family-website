@@ -8,8 +8,9 @@ from family_website.core.repository import BaseRepository
 class AnimalRepository(BaseRepository[Animal, AnimalMapper]):
     _DATA_PATH = "family_website/data/animals.yml"
 
-    def get_sorted_items(self) -> List[Animal]:
-        return sorted(self.get_items(), key=lambda x: (-x.alive, x.name))
+    def get_items(self) -> List[Animal]:
+        items = super().get_items()
+        return sorted(items, key=lambda x: (-x.alive, x.name))
 
 
 animal_repository = AnimalRepository(mapper=AnimalMapper)

@@ -32,6 +32,6 @@ AUTHOR_FEED_RSS = None
 # --- Site Data ---
 SITE_DATA = {
     "people": person_repository.get_items(),
-    "animals": animal_repository.get_sorted_items(),
-    "events": event_repository.get_sorted_items(),
+    "animals": animal_repository.get_items(),
+    "events": event_repository.get_items(),
 }
