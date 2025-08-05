@@ -1,6 +1,6 @@
 import pytest
 
-from person.repository import PersonRepository
+from family_website.person.repository import PersonRepository
 
 
 @pytest.fixture

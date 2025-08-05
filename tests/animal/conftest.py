@@ -1,6 +1,6 @@
 import pytest
 
-from animal.repository import AnimalRepository
+from family_website.animal.repository import AnimalRepository
 
 
 @pytest.fixture

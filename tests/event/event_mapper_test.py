@@ -1,7 +1,7 @@
 from datetime import date
 
-from event.dto import Event
-from event.mapper import EventMapper
+from family_website.event.dto import Event
+from family_website.event.mapper import EventMapper
 
 
 class TestEventMapper:
