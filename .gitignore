@@ -160,7 +160,7 @@ cython_debug/
 .idea/
 
 # Pelican
-src/output/
+output/
 
 # Coverage
 coverage.json
