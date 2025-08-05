@@ -50,7 +50,7 @@ args = [
 env = { "PYTHONPATH" = "." }
 
 [tool.poe.tasks.test]
-cmd = "uv run pytest --cov=family_website --cov-report=json"
+cmd = "uv run pytest --cov=family_website --cov-report=json --cov-report=term"
 env = { "PYTHONPATH" = "." }
 
 [tool.poe.tasks]
@@ -93,8 +93,8 @@ ignore_missing_imports = true
 [tool.coverage.run]
 branch = true
 omit = [
-    "src/core/settings.py",
-    "src/tasks.py",
+    "family_website/core/settings.py",
+    "family_website/tasks.py",
     "*/dto.py",
 ]
 
