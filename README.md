@@ -10,10 +10,8 @@ The deployment is done through Github Actions and posted on GitHub Pages.
 
 ## Requirements
 
-- Python 3.11
-- Docker
-- Docker Compose
-- Make
+- Python 3.13
+- [uv package](https://github.com/astral-sh/uv)
 
 ## Environment Variables
 
@@ -25,10 +23,8 @@ The deployment is done through Github Actions and posted on GitHub Pages.
 
 | **Action** | **Command** |
 | :--- | :--- |
-| Build the project | `make build` |
-| Run the project | `make run` |
-| Format project | `make fmt` |
-| Lint project | `make lint` |
-| Test project | `make test` |
-| Clean docker project files | `make clean` |
-| Update uv lock | `make update-lock` |
+| Build the project | `uv run poe build` |
+| Run the project | `uv run poe serve` |
+| Format project | `uv run poe lint_fix` |
+| Lint project | `uv run poe lint` |
+| Test project | `uv run poe test` |
