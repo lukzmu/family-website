@@ -1,21 +1,14 @@
-from typing import List
-
-import yaml
-
+from family_website.core.repository import BaseRepository
 from family_website.event.dto import Event
 from family_website.event.mapper import EventMapper
 
 
-class EventRepository:
-    def __init__(self, data_path: str) -> None:
-        self._data_path = data_path
+class EventRepository(BaseRepository[Event, EventMapper]):
+    _DATA_PATH = "family_website/data/events.yml"
 
-    def get_event_list(self) -> List[Event]:
-        with open(self._data_path) as file:
-            data = yaml.safe_load(file)
-            events = [EventMapper.dict_to_dto(event=event) for event in data["items"]]
-            events.sort(reverse=True)
-            return events
+    def get_items(self) -> list[Event]:
+        items = super().get_items()
+        return sorted(items, reverse=True)
 
 
-event_repository = EventRepository(data_path="family_website/data/events.yml")
+event_repository = EventRepository(mapper=EventMapper)

@@ -1,21 +1,22 @@
 from typing import Any, Dict
 
+from family_website.core.mapper import BaseMapper
 from family_website.person.dto import Person, SocialMedia
 
 
-class PersonMapper:
+class PersonMapper(BaseMapper[Person]):
     @staticmethod
-    def dict_to_dto(person: Dict[str, Any]) -> Person:
+    def dict_to_dto(item: Dict[str, Any]) -> Person:
         return Person(
-            name=person["name"],
-            avatar=person["avatar"],
-            title=person["title"],
+            name=item["name"],
+            avatar=item["avatar"],
+            title=item["title"],
             social=[
                 SocialMedia(
                     name=social["name"],
                     icon=social["icon"],
                     url=social["url"],
                 )
-                for social in person.get("social", [])
+                for social in item.get("social", [])
             ],
         )

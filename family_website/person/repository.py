@@ -1,19 +1,10 @@
-from typing import List
-
-import yaml
-
+from family_website.core.repository import BaseRepository
 from family_website.person.dto import Person
 from family_website.person.mapper import PersonMapper
 
 
-class PersonRepository:
-    def __init__(self, data_path: str) -> None:
-        self._data_path = data_path
-
-    def get_people_list(self) -> List[Person]:
-        with open(self._data_path) as file:
-            data = yaml.safe_load(file)
-            return [PersonMapper.dict_to_dto(person=person) for person in data["items"]]
+class PersonRepository(BaseRepository[Person, PersonMapper]):
+    _DATA_PATH = "family_website/data/people.yml"
 
 
-person_repository = PersonRepository(data_path="family_website/data/people.yml")
+person_repository = PersonRepository(mapper=PersonMapper)

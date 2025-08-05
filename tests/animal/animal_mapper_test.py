@@ -6,7 +6,7 @@ class TestAnimalMapper:
     def test_animal_mapper_parses_data_correctly(self, animal_data):
         selected_animal = animal_data["items"][0]
 
-        result = AnimalMapper.dict_to_dto(animal=selected_animal)
+        result = AnimalMapper.dict_to_dto(item=selected_animal)
 
         assert type(result) is Animal
         assert result.name == selected_animal["name"]

@@ -1,18 +1,20 @@
 import json
 
+from family_website.animal.mapper import AnimalMapper
+from family_website.animal.repository import AnimalRepository
+
 
 class TestAnimalRepository:
-    def test_animal_repository_constructor(self, animal_repository):
-        data_path = "data/animals.yml"
-        repository = animal_repository(data_path=data_path)
+    def test_animal_repository_constructor(self):
+        repository = AnimalRepository(mapper=AnimalMapper)
 
-        assert repository._data_path == data_path
+        assert repository._mapper == AnimalMapper
 
     def test_animals_list_returns_correct_animal_count(self, animal_repository, animal_data, mocker):
         mocked_data = mocker.mock_open(read_data=json.dumps(animal_data))
         mocker.patch("builtins.open", mocked_data)
 
-        result = animal_repository().get_animals_list()
+        result = animal_repository.get_items()
 
         assert len(result) == 4
 
@@ -20,7 +22,7 @@ class TestAnimalRepository:
         mocked_data = mocker.mock_open(read_data=json.dumps(animal_data))
         mocker.patch("builtins.open", mocked_data)
 
-        result = animal_repository().get_animals_list()
+        result = animal_repository.get_items()
 
         assert result[0].name == "Vader"
         assert result[1].name == "Wifi"
