@@ -7,4 +7,5 @@ Model = TypeVar("Model")
 class BaseMapper(ABC, Generic[Model]):
     @staticmethod
     @abstractmethod
-    def dict_to_dto(item: dict[str, Any]) -> Model: ...
+    def dict_to_dto(item: dict[str, Any]) -> Model:
+        raise NotImplementedError
