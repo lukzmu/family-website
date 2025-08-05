@@ -1,8 +1,8 @@
 import os
 
-from animal.repository import animal_repository
-from event.repository import event_repository
-from person.repository import person_repository
+from family_website.animal.repository import animal_repository
+from family_website.event.repository import event_repository
+from family_website.person.repository import person_repository
 
 # --- Site Data ---
 SITEURL = os.getenv("SITEURL", default="https://zmudzinski.me")
@@ -12,8 +12,8 @@ TIMEZONE = "Europe/Warsaw"
 DEFAULT_LANG = "en"
 
 # --- Pelican Paths and Settings ---
-PATH = "content"
-THEME = "themes/core"
+PATH = "family_website/content"
+THEME = "family_website/themes/core"
 THEME_STATIC_DIR = "theme"
 DEFAULT_PAGINATION = False
 DELETE_OUTPUT_DIRECTORY = True

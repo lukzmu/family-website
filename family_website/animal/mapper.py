@@ -1,6 +1,6 @@
 from typing import Any, Dict
 
-from animal.dto import Animal
+from family_website.animal.dto import Animal
 
 
 class AnimalMapper:

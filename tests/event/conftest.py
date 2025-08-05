@@ -1,6 +1,6 @@
 import pytest
 
-from event.repository import EventRepository
+from family_website.event.repository import EventRepository
 
 
 @pytest.fixture

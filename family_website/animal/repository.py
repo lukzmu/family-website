@@ -2,8 +2,8 @@ from typing import List
 
 import yaml
 
-from animal.dto import Animal
-from animal.mapper import AnimalMapper
+from family_website.animal.dto import Animal
+from family_website.animal.mapper import AnimalMapper
 
 
 class AnimalRepository:
@@ -19,4 +19,4 @@ class AnimalRepository:
             return sorted(animals, key=lambda x: (-x.alive, x.name))
 
 
-animal_repository = AnimalRepository(data_path="data/animals.yml")
+animal_repository = AnimalRepository(data_path="family_website/data/animals.yml")

@@ -143,6 +143,9 @@ venv.bak/
 .dmypy.json
 dmypy.json
 
+# ruff
+.ruff_cache
+
 # Pyre type checker
 .pyre/
 
@@ -160,7 +163,7 @@ cython_debug/
 .idea/
 
 # Pelican
-src/output/
+output/
 
 # Coverage
 coverage.json

@@ -1,5 +1,5 @@
-from person.dto import Person
-from person.mapper import PersonMapper
+from family_website.person.dto import Person
+from family_website.person.mapper import PersonMapper
 
 
 class TestPersonMapper:

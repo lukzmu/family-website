@@ -1,6 +1,6 @@
 from typing import Any, Dict
 
-from person.dto import Person, SocialMedia
+from family_website.person.dto import Person, SocialMedia
 
 
 class PersonMapper:

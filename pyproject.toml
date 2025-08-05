@@ -13,6 +13,7 @@ dependencies = [
     "pelican<5.0.0,>=4.11.0",
     "pyyaml<7.0.0,>=6.0.2",
     "gitpython<4.0.0,>=3.1.44",
+    "poethepoet>=0.36.0",
 ]
 
 [tool.uv]
@@ -23,10 +24,44 @@ dev = [
     "ruff<1.0.0,>=0.9.1",
     "mypy<2.0.0,>=1.14.1",
     "pytest<9.0.0,>=8.3.4",
-    "bandit<2.0.0,>=1.8.2",
     "pytest-mock<4.0.0,>=3.14.0",
     "pytest-cov<7.0.0,>=6.0.0",
 ]
+
+[tool.poe]
+envfile = ".env"
+
+[tool.poe.tasks.serve]
+cmd = "uv run python -m pelican -lr $content -s $settings -o $output -b $host"
+args = [
+    { name = "content", default = "family_website/content" },
+    { name = "settings", default = "family_website/core/settings.py" },
+    { name = "output", default = "output" },
+    { name = "host", default="0.0.0.0" },
+]
+
+[tool.poe.tasks.build]
+cmd = "uv run pelican $content -s $settings -o $output"
+args = [
+    { name = "content", default = "family_website/content" },
+    { name = "settings", default = "family_website/core/settings.py" },
+    { name = "output", default = "output" },
+]
+env = { "PYTHONPATH" = "." }
+
+[tool.poe.tasks.test]
+cmd = "uv run pytest --cov=family_website --cov-report=json"
+env = { "PYTHONPATH" = "." }
+
+[tool.poe.tasks]
+_ruff_check = "uv run ruff check family_website"
+_ruff_format_check = "uv run ruff format --check"
+_mypy_check = "uv run mypy family_website"
+lint = ["_ruff_check", "_ruff_format_check", "_mypy_check"]
+
+_ruff_check_fix = "uv run ruff check --fix"
+_ruff_format_fix = "uv run ruff format"
+lint_fix = ["_ruff_check_fix", "_ruff_format_fix"]
 
 [tool.ruff]
 line-length = 120
@@ -39,6 +74,7 @@ select = [
     "C",  # flake8-comprehensions
     "I",  # isort errors
     "B",  # flake8-bugbear
+    "S",  # flake8-bandit
 ]
 ignore = [
     "E501",  # line too long, handled by black

@@ -1,5 +1,5 @@
-from animal.dto import Animal
-from animal.mapper import AnimalMapper
+from family_website.animal.dto import Animal
+from family_website.animal.mapper import AnimalMapper
 
 
 class TestAnimalMapper:
