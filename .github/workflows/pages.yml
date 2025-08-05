@@ -2,8 +2,11 @@ name: 'Publish family website to Github Pages'
 
 on:
   push:
+    branches:
+      - main
   pull_request:
   workflow_dispatch:
+
 permissions:
   contents: write
 
